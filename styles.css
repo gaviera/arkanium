@@ -1,193 +1,136 @@
-/* Reset some default styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Styling for the body */
 body {
-    font-family: 'Poppins', sans-serif;
-    color: #fff;
     margin: 0;
-    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #000;
 }
 
-/* Styling for the header */
 header {
-    background-color: #33333300;
-    padding: 20px 20px;
+    background-color: #000;
+    padding: 20px 0;
+    border-bottom: 1px solid #000;
+    
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #000;
 }
 
-/* Styling for the title */
-.header-left h1 {
-    font-size: 1.5em;
-    margin: 0;
-}
-
-/* Styling for the navigation */
-.header-right ul {
-    list-style: none;
-    text-align: right;
-}
-
-.header-right ul li {
-    display: inline;
-}
-
-.header-right ul li a {
-    text-decoration: none;
-    color: #fff;
-    padding: 10px 20px;
-    transition: color 0.3s;
-}
-
-.header-right ul li a:hover {
-    color: #F03634; /* Change text color to red on hover */
-}
-
-/* Styling for the background GIF */
-.bg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background: url('https://wallpaperxyz.com/wp-content/uploads/Gif-Animated-Wallpaper-Background-Full-HD-Free-Download-for-PC-Macbook-261121-Wallpaperxyz.com-47.gif') center/cover no-repeat;
-    opacity: 0.7; /* Adjust the opacity as needed */
-}
-
-/* Styling for the black overlay */
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Adjust the opacity as needed */
-    z-index: -1;
-}
-
-/* Styling for the center content */
-.center-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: left; /* Align text to the left */
-    width: 100%;
-    padding-left: 20px; /* Add padding to the left */
-}
-
-.additional-content {
+nav {
     display: flex;
-    flex-wrap: wrap;
-    background-color: white;
-    padding: 20px;
-    position: absolute; /* Change positioning to absolute */
-    top: 100%; /* Position below all other content */
-    left: 0;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
-    z-index: 1; /* Ensure it's above other content */
 }
 
-.text, .image {
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+}
+
+.auth-buttons a {
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 10px 20px;
+}
+
+.login {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #333;
+}
+
+.signup {
+    background-color: #CA2F35;
+    color: #fff;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    padding: 60px 0;
+    background: #000;
+}
+
+.hero-text {
     flex: 1;
 }
 
-.text {
-    padding-right: 20px;
-}
-
-.image img {
-    width: 100%; /* La imagen ocupa todo el ancho disponible */
-    height: auto; /* Se ajusta la altura automáticamente para mantener la proporción */
-}
-
-.additional-content h1 {
-    padding-top: 10px;
-    color: #16181F;
-    font-size: 2em;
-}
-
-.additional-content h2 {
-    color: #16181F;
-    font-size: 1.5em;
-}
-.additional-content p {
-    padding-left: 50px;
-    padding-top: 10px;
-    font-size: 1.2em;
-    color: #16181F;
-}
-
-p {
-    padding-left: 50px;
-}
-
-/* Styling for the title */
-h1 {
-    padding-left: 50px;
-    font-size: 3em;
-}
-
-/* Styling for the subtitle */
-h2 {
-    margin-top: 20px;
-    padding-left: 50px;
-    font-size: 1.5em;
+.hero-text p.free-trial {
+    color: #999;
+    font-size: 14px;
     margin-bottom: 10px;
 }
-/* Styling for the image gallery container */
-.gallery-container {
+
+.hero-text h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.cta-buttons a {
+    text-decoration: none;
+    margin-right: 20px;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.try-free {
+    background-color: #CA2F35;
+    color: #fff;
+    border-radius: 20px;
+}
+
+.how-it-works {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #333;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 400px;
+}
+
+.trusted-by {
+    background-color: #f9f9f9;
+    padding: 40px 0;
+}
+
+.trusted-by p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.logos {
     display: flex;
-    flex-wrap: wrap; /* Allow items to wrap */
-    justify-content: space-between; /* Distribute items evenly */
-    gap: 20px; /* Add space between items */
-    margin-top: 20px;
-    padding-right: 50px;
-    padding-left: 50px; /* Add space above the gallery */
+    justify-content: center;
+    gap: 40px;
 }
 
-/* Styling for each gallery item */
-.gallery-item {
-    flex: 0 0 calc(33.333% - 20px); /* Set item width to one-third minus the gap */
-    border-radius: 8px; /* Add rounded corners */
-    overflow: hidden; /* Hide overflow content */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow effect */
-    transition: transform 0.3s ease; /* Add transition for smooth hover effect */
-}
-
-/* Styling for hover effect */
-.gallery-item:hover {
-    transform: translateY(-5px); /* Move the item 5 pixels up on hover */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add shadow effect on hover */
-}
-
-/* Styling for images */
-.gallery-item img {
-    width: 80%; /* Set image width to 80% of the container */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Make the image a block element */
-    margin: 0 auto; /* Center the image horizontally */
-}
-
-/* Styling for titles */
-.gallery-item h3 {
-    color: #16181F;
-    font-size: 1.2em; /* Set font size */
-    margin: 10px; /* Add space around the title */
-}
-
-/* Styling for descriptions */
-.gallery-item p {
-    margin: 0; /* Reset margin */
-    padding: 10px; /* Add padding */
-    font-size: 1em; /* Set font size */
-    color: #16181F; /* Darken text color for better readability */
-    
+.logos img {
+    width: 200px;
+    height: 100%;
+    opacity: 1;
 }
