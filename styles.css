@@ -13,6 +13,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 /* Header styles */
@@ -33,6 +34,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 /* Navigation menu styles */
@@ -42,6 +44,7 @@ nav {
     gap: 50px;
     margin: 0;
     padding: 0;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 .navigation-link {
@@ -61,14 +64,22 @@ nav {
     text-decoration: none;
     padding: 10px 20px;
     border-radius: 20px;
+    margin-top: 10px; /* Add margin for spacing when wrapping */
 }
 
 /* Hero section styles */
 .hero-section {
+    position: relative;
     display: flex;
     align-items: center;
     padding: 60px 0;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/90fd48114404249.603a926c887fb.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
+
 
 .hero-content {
     flex: 1;
@@ -99,10 +110,93 @@ nav {
 }
 
 .section-content h2 {
-    font-size: 28px;
+    font-size: 36px;
     margin-bottom: 20px;
 }
 
 .section-content p {
     font-size: 18px;
+}
+
+/* Media queries for responsiveness */
+
+/* Tablets and smaller screens */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex; /* Show the menu toggle button */
+    }
+
+    .navigation-menu {
+        display: none; /* Hide the navigation menu by default */
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navigation-menu.active {
+        display: flex; /* Show the navigation menu when active */
+    }
+
+    .navigation-menu {
+        gap: 20px; /* Reduce gap for smaller screens */
+        justify-content: center; /* Center navigation links */
+    }
+    
+    .hero-content h1 {
+        font-size: 36px; /* Reduce font size for smaller screens */
+    }
+    
+    .hero-content p {
+        font-size: 16px; /* Reduce font size for smaller screens */
+    }
+    
+    .section-content h2 {
+        font-size: 28px; /* Reduce font size for smaller screens */
+    }
+    
+    .section-content p {
+        font-size: 16px; /* Reduce font size for smaller screens */
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+    
+    .logo {
+        margin-bottom: 10px; /* Add margin for spacing */
+    }
+    
+    .navigation-menu {
+        flex-direction: column; /* Stack links vertically */
+        gap: 10px; /* Reduce gap further */
+    }
+    
+    .hero-section {
+        flex-direction: column; /* Stack hero content vertically */
+        text-align: center; /* Center text */
+    }
+    
+    .hero-content {
+        margin-bottom: 20px; /* Add margin for spacing */
+    }
+    
+    .hero-content h1 {
+        font-size: 28px; /* Reduce font size further */
+    }
+    
+    .hero-content p {
+        font-size: 14px; /* Reduce font size further */
+    }
+    
+    .section-content h2 {
+        font-size: 24px; /* Reduce font size further */
+    }
+    
+    .section-content p {
+        font-size: 14px; /* Reduce font size further */
+    }
 }
