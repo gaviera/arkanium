@@ -4,8 +4,8 @@ body {
     font-family: 'Poppins', sans-serif;
     /* background-color: #16181F; */
     color: #FFF;
-    background: linear-gradient(-45deg, #16181F, #731a1d, #16181F, #731a1d);
-    background-size: 400% 400%;
+    background: radial-gradient(circle, #16181F, #451011, #16181F, #451011);
+    background-size: 200% 200%;
     animation: gradientAnimation 15s ease infinite;
 }
 
