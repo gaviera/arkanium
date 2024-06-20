@@ -1,26 +1,9 @@
+/* General styles */
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    color: #FFF;
-}
-
-header {
     background-color: #16181F;
-    padding: 20px 0;
-    border-bottom: 1px solid #16181F;
-    
-}
-
-/* Estilo para los enlaces en su estado normal */
-.nav-link {
     color: #FFF;
-    text-decoration: none;
-    transition: color 0.3s ease; /* Suaviza la transición del color */
-}
-
-/* Estilo para los enlaces cuando se pasa el mouse por encima */
-.nav-link:hover {
-    color: #CA2F35; /* Cambia este color al que desees para el efecto hover */
 }
 
 .container {
@@ -30,7 +13,19 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+/* Header styles */
+header {
     background-color: #16181F;
+    padding: 20px 0;
+    border-bottom: 1px solid #16181F;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFF;
 }
 
 nav {
@@ -40,84 +35,53 @@ nav {
     width: 100%;
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.nav-links {
+/* Navigation menu styles */
+.navigation-menu {
     list-style: none;
     display: flex;
     gap: 50px;
+    margin: 0;
+    padding: 0;
 }
 
-.nav-links a {
-    text-decoration: none;
+.navigation-link {
     color: #FFF;
-}
-
-.auth-buttons a {
     text-decoration: none;
-    margin-left: 20px;
-    padding: 10px 20px;
+    transition: color 0.3s ease;
 }
 
-.login {
-    background-color: #fff;
-    color: #333;
-    border: 1px solid #333;
+.navigation-link:hover {
+    color: #CA2F35;
 }
 
-.signup {
+/* Contact button styles */
+.contact-button .button-link {
     background-color: #CA2F35;
-    color: #fff;
+    color: #FFF;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
 }
 
-.hero {
+/* Hero section styles */
+.hero-section {
     display: flex;
     align-items: center;
     padding: 60px 0;
-    background: #16181F;
 }
 
-.hero-text {
+.hero-content {
     flex: 1;
 }
 
-.hero-text p.free-trial {
-    color: #999;
-    font-size: 14px;
-    margin-bottom: 10px;
-}
-
-.hero-text h1 {
+.hero-content h1 {
     font-size: 48px;
     margin-bottom: 20px;
 }
 
-.hero-text p {
+.hero-content p {
     font-size: 18px;
     margin-bottom: 30px;
-}
-
-.cta-buttons a {
-    text-decoration: none;
-    margin-right: 20px;
-    padding: 15px 30px;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-.try-free {
-    background-color: #CA2F35;
-    color: #fff;
-    border-radius: 20px;
-}
-
-.how-it-works {
-    background-color: #fff;
-    color: #333;
-    border: 1px solid #333;
 }
 
 .hero-image img {
@@ -125,24 +89,20 @@ nav {
     max-width: 400px;
 }
 
-.trusted-by {
-    background-color: #f9f9f9;
-    padding: 40px 0;
+.highlight {
+    color: #CA2F35;
 }
 
-.trusted-by p {
-    font-size: 18px;
+/* About and partnerships section styles */
+.about-section, .partnerships-section {
+    padding: 60px 0;
+}
+
+.section-content h2 {
+    font-size: 28px;
     margin-bottom: 20px;
 }
 
-.logos {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-}
-
-.logos img {
-    width: 200px;
-    height: 100%;
-    opacity: 1;
+.section-content p {
+    font-size: 18px;
 }
