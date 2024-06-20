@@ -6,7 +6,6 @@ body {
     color: #FFF;
     background: radial-gradient(circle, #16181F, #451011, #16181F, #451011);
     background-size: 200% 200%;
-    animation: gradientAnimation 15s ease infinite;
 }
 
 html {
@@ -87,17 +86,6 @@ nav {
     background-repeat: no-repeat; */
 }
 
-@keyframes gradientAnimation {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
 
 .hero-content {
     flex: 1;
