@@ -6,6 +6,7 @@ body {
     color: #FFF;
     background: radial-gradient(circle, #16181F, #31222F, #16181F, #31222F);
     background-size: 200% 200%;
+    text-align: center;
 }
 
 html {
@@ -13,14 +14,14 @@ html {
 }
 
 .container {
-    width: 90%;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding-left: 18px;
     padding-right: 18px;
     padding-top: 9px;
     padding-bottom: 9px;
-    display: flex;
+    /* display: flex; */
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap; /* Allow wrapping for smaller screens */
@@ -182,6 +183,10 @@ nav {
         border-radius: 100%;
     }
 
+    .logo {
+        text-align: center;
+        width: 100%;
+    }
 
     .navigation-menu {
         display: none; /* Hide the navigation menu by default */
