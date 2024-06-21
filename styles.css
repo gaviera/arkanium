@@ -88,13 +88,14 @@ nav {
 }
 
 /* Contact button styles */
-.contact-button .button-link {
+.contact-button {
     background-color: #CA2F35;
     color: #FFF;
     text-decoration: none;
-    padding: 10px 20px;
+    width: 250px;
     border-radius: 20px;
-    margin-top: 10px; /* Add margin for spacing when wrapping */
+    border: 0;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3); /* Sombra suave */
 }
 
 /* Hero section styles */
@@ -104,10 +105,6 @@ nav {
     align-items: center;
     padding: 60px 0;
     flex-wrap: wrap; /* Allow wrapping for smaller screens */
-    /* background-image: url('https://static.vecteezy.com/system/resources/previews/035/442/407/non_2x/abstract-background-with-contour-gradient-colorful-waves-transparent-free-png.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; */
 }
 
 
@@ -162,7 +159,6 @@ nav {
     height: 150px;
     border-radius: 100%;
 }
-
 
 .person p {
     text-align: center;
