@@ -312,6 +312,10 @@ body::-webkit-scrollbar {
     justify-content: flex-end; /* Align items to the bottom */
 }
 
+.chat-container p {
+    font-size: 0.9em;
+}
+
 .chat-input {
     width: calc(100% - 20px); /* Ensure the input spans the width of the container */
     margin: 10px; /* Add some margin around the input */
@@ -341,4 +345,29 @@ body::-webkit-scrollbar {
     top: 50%; /* Position it in the vertical center */
     transform: translateY(-50%); /* Adjust for the icon's height */
     cursor: none; /* Change cursor to pointer when hovering over the icon */
+}
+
+/* General message styling */
+.message {
+    max-width: 70%; /* Set a maximum width for messages */
+    border-radius: 18px; /* Set border radius for rounded corners */
+    background-color: #0c0d11;
+    padding: 0px 12px 0px 12px;
+    max-width: 50%;
+}
+
+/* User message styling */
+.user-message {
+    text-align: end;
+    color: white; /* Text color for user messages */
+    align-self: flex-end; /* Align user messages to the right */
+    margin-right: 36px;
+}
+
+/* Response message styling */
+.response-message {
+    text-align: left;
+    color: white; /* Text color for response messages */
+    align-self: flex-start; /* Align response messages to the left */
+    margin-left: 36px;
 }
