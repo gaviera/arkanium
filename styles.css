@@ -37,9 +37,21 @@ body::-webkit-scrollbar {
 /* GENERAL STYLING */
 
 .highline {
-    background-image: linear-gradient(to right, #F03634, #F9C22E); /* Aplica un gradiente lineal al texto */
-    -webkit-background-clip: text; /* Permite que el gradiente se aplique al texto en navegadores WebKit */
-    color: transparent; /* Hace que el texto sea transparente, mostrando solo el gradiente */
+    background-image: linear-gradient(90deg, #F03634, #F9C22E, #F03634);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gradientMove 3s linear infinite;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 200% 50%;
+    }
 }
 
 .separator {
