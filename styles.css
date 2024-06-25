@@ -264,7 +264,6 @@ body::-webkit-scrollbar {
     object-fit: cover; /* Ajusta la imagen para que cubra todo el área disponible */
     max-width: 100%; /* Asegura que la imagen sea completamente responsive */
     align-content: center;
-    filter: grayscale(50%);
 }
 
 @keyframes scroll {
