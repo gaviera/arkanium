@@ -97,6 +97,8 @@ body::-webkit-scrollbar {
     background-size: 200% 100%;
     animation: gradientMove 3s linear infinite;
     border-radius: 32px;
+    user-select: none;
+    
 }
 
 
@@ -281,4 +283,62 @@ body::-webkit-scrollbar {
     100% {
         transform: translateX(-100%);
     }
+}
+
+
+.talkwithus-section {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange children in a column */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center the text inside elements */
+}
+
+.talkwithus-section p {
+    font-size: 1.1em; /* Set the text size of paragraphs */
+}
+
+.talkwithus-section h1 {
+    font-size: 2.5em; /* Set the text size of the section title */
+}
+
+.chat-container {
+    border-radius: 36px; /* Set border radius for rounded corners */
+    width: 80%; /* Set the width of the chat container */
+    height: 450px; /* Set the height of the chat container */
+    background-color: #2c2c2c27; /* Set the background color with transparency */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange children in a column */
+    justify-content: flex-end; /* Align items to the bottom */
+}
+
+.chat-input {
+    width: calc(100% - 20px); /* Ensure the input spans the width of the container */
+    margin: 10px; /* Add some margin around the input */
+    padding: 10px; /* Add padding inside the input */
+    border-radius: 18px; /* Set border radius for rounded corners */
+    background-color: #0c0d11;
+    border: none;
+    color: #fff;
+    font-family: 'Onest', sans-serif; /* Establece la fuente principal del cuerpo del documento */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.chat-input:focus {
+    border: none;
+    outline: none;
+}
+
+.input-container {
+    position: relative; /* Set relative positioning to the container */
+    width: calc(100% - 20px); /* Set width of the input container */
+    margin: 10px; /* Add margin around the input container */
+}
+
+.input-container i {
+    position: absolute; /* Position the icon absolutely */
+    right: 25px; /* Position it 15px from the right */
+    top: 50%; /* Position it in the vertical center */
+    transform: translateY(-50%); /* Adjust for the icon's height */
+    cursor: none; /* Change cursor to pointer when hovering over the icon */
 }
