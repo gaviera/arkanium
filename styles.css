@@ -167,7 +167,7 @@ body::-webkit-scrollbar {
 }
 
 .product-image {
-    width: 100%; /* Asegura que la imagen ocupe todo el ancho de su contenedor */
+    width: 80%; /* Asegura que la imagen ocupe todo el ancho de su contenedor */
     max-height: 150px; /* Establece la altura máxima de la imagen del producto */
     object-fit: cover; /* Ajusta la imagen para que cubra todo el área disponible */
     max-width: 100%; /* Asegura que la imagen sea completamente responsive */
