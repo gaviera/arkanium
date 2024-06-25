@@ -17,6 +17,11 @@ body {
     color: #ffffff; /* Establece el color de texto predeterminado */
 }
 
+/* Smooth scrolling behavior */
+html {
+    scroll-behavior: smooth;
+}
+
 h1, h2 {
     user-select: none; /* Evita que el título sea seleccionable por el usuario */
 }
