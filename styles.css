@@ -45,15 +45,6 @@ body::-webkit-scrollbar {
     animation: gradientMove 3s linear infinite;
 }
 
-@keyframes gradientMove {
-    0% {
-        background-position: 0% 50%;
-    }
-    100% {
-        background-position: 200% 50%;
-    }
-}
-
 .separator {
     width: 50%; /* Establece el ancho del separador */
     margin: 40px auto; /* Centra el separador horizontalmente con márgenes superior e inferior de 40px */
@@ -97,6 +88,27 @@ body::-webkit-scrollbar {
     color: #ffffff; /* Establece el color de texto predeterminado para los botones de navegación */
     font-weight: normal; /* Estilo normal del texto */
 }
+
+.cta-button {
+    text-decoration: none; /* Elimina el subrayado predeterminado de los botones de navegación */
+    padding: 10px 20px; /* Establece el relleno interno de los botones de navegación */
+    color: white;
+    background-image: linear-gradient(90deg, #F03634, #F9C22E, #F03634);
+    background-size: 200% 100%;
+    animation: gradientMove 3s linear infinite;
+    border-radius: 32px;
+}
+
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 200% 50%;
+    }
+}
+
 
 .nav-button:hover {
     color: #F9C22E; /* Cambia el color del texto al pasar el cursor sobre los botones de navegación */
@@ -191,3 +203,45 @@ body::-webkit-scrollbar {
     margin-bottom: 20px; /* Establece el margen inferior del título de la sección Acerca de nosotros */
 }
 /* END ABOUT US STYLING */
+
+
+.usimages-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 48px;
+    padding: 20px;
+}
+.profile-card {
+    text-align: center;
+    max-width: 150px;
+}
+.profile-card img {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-card h3 {
+    margin: 10px 0 5px;
+    font-size: 1.2em;
+}
+.profile-card p {
+    margin: 10px;
+    font-size: 0.9em;
+    color: gray;
+}
+.social-links a {
+    margin: 0 7px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.2em;
+    opacity: 0.5;
+    transition: opacity 0.2s ease-in-out; /* Aplica una transición suave al transformar el producto */
+}
+
+.social-links a:hover {
+    opacity: 1;
+}
+
