@@ -1,6 +1,12 @@
 /* Import the Onest font */
 @import url('https://fonts.googleapis.com/css2?family=Onest:wght@300;400;600&display=swap');
 
+
+::selection {
+    background-color: #ff8400; /* Cambia esto al color que desees para el fondo */
+    color: #000000; /* Cambia esto al color que desees para el texto */
+  }
+  
 body {
     font-family: 'Onest', sans-serif; /* Establece la fuente principal del cuerpo del documento */
     /* width: 100%; */ /* Hace que el cuerpo ocupe el ancho completo del viewport */
@@ -16,6 +22,64 @@ body {
     
     color: #ffffff; /* Establece el color de texto predeterminado */
 }
+
+
+
+#cursor-aura {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        rgba(255, 255, 255, 0.8) 0%,
+        rgb(255, 255, 255) 50%,
+        rgba(255, 165, 0, 0) 70%
+    );
+    filter: blur(40px);
+    pointer-events: none;
+    z-index: 9998;
+    transition: width 0.3s, height 0.3s, background 0.3s, filter 0.3s;
+    mix-blend-mode: screen; /* Esto ayuda a crear un efecto más luminoso */
+}
+
+/* Efecto hover para elementos interactivos */
+a:hover ~ #custom-cursor,
+button:hover ~ #custom-cursor {
+    width: 30px;
+    height: 30px;
+}
+
+a:hover ~ #cursor-aura,
+button:hover ~ #cursor-aura {
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(
+        circle,
+        rgba(255, 0, 0, 0.9) 0%,
+        rgba(255, 128, 0, 0.4) 50%,
+        rgba(255, 165, 0, 0) 70%
+    );
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(255, 165, 0, 0.5); /* Color naranja suave */
+    pointer-events: none; /* Asegura que el pseudo-elemento no interfiera con los eventos del ratón */
+    z-index: 9999;
+    transition: transform 0.1s ease-out;
+}
+
+body:hover::after {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 165, 0, 0.7); /* Color naranja suave más intenso al pasar el cursor */
+}
+
 
 /* Smooth scrolling behavior */
 html {
@@ -267,13 +331,13 @@ body::-webkit-scrollbar {
     object-fit: cover; /* Ajusta la imagen para que cubra todo el área disponible */
     max-width: 100%; /* Asegura que la imagen sea completamente responsive */
     align-content: center;
-    opacity: 0.5;
-    transition: opacity 0.2s ease-in-out;
+    opacity: 0.7;
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out; /* Añade la transición para el suavizado */
 }
 
 .techstack-item:hover {
     opacity: 1;
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
 @keyframes scroll {
