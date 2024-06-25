@@ -88,6 +88,11 @@
         width: 100px;
         height: 100px;
     }
+
+    .techstack {
+        display: flex;
+        animation: scroll 20s linear infinite;
+    }
 }
 
 /* Tablet Styles */
@@ -164,6 +169,11 @@
     .profile-card img {
         width: 110px;
         height: 110px;
+    }
+
+    .techstack {
+        display: flex;
+        animation: scroll 20s linear infinite;
     }
 }
 
