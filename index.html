@@ -1,85 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arkanium </title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <div class="container">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Arkanium</title>
+        
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="responsive.css">
+
+        <script src="https://kit.fontawesome.com/151463383b.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+
+        <!-- Header Section -->
+        <header class="header">
+            <h1 class="headline">Arkanium</h1>
             <nav>
-                <div class="logo" style="text-align: center;">Arkanium</div>
-                <ul class="navigation-menu">
-                    <li><a href="#aboutus" class="navigation-link">About us</a></li>
-                    <li><a href="#partnerships" class="navigation-link">Partnerships</a></li>
-                    <li><a href="#products" class="navigation-link">Products and Services</a></li>
-                    <li><a href="#contact" class="navigation-link">Talk with us!</a></li>
+                <ul class="nav-list">
+                    <li><a href="#" class="nav-button">About us</a></li>
+                    <li><a href="#" class="nav-button">Services</a></li>
+                    <li><a href="#" class="nav-button">Talk with us!</a></li>
                 </ul>
             </nav>
-        </div>
-    </header>
-    <main>
-        <section class="hero-section">
-            <div class="container-other">
-                <div class="hero-content">
-                    <h1>Be Part of the <span class="highlight">New Revolution</span><br>with <b>Generative AI</b></h1>
-                    <!-- <h1>Sé parte de la <span class="highlight">nueva revolución</span><br> con <b>Inteligencia Artificial</b> Generativa</h1> -->
-                    <p>start now by integrating Generative AI services into your business.</p>
-                </div>
-            </div>
+        </header>
+        <!-- End Header Section -->
+        
+        <!-- Main Section -->
+        <section class="main-section">
+            <h1>Be Part of the  New Revolution<br>with <span class="highline">Generative AI</span> <i class="fa-solid fa-fire-flame-curved highline"></i></h1>
+            <p>start now by integrating Generative AI services into your business.</p>
         </section>
-        <section class="about-section" id="aboutus">
-            <div class="container">
-                <div>
-                    <h2>About us</h2>
-                    <p>We are a group of developers focused on the ethical use of new technologies related to generative artificial intelligence. We consistently work with and specialize in the latest innovations from major companies like Google, OpenAI, and Langchain.</p>
-                
-                    <div class="logos">
-                        <div class="person">
-                            <img src="https://media.licdn.com/dms/image/C4D03AQHMW55OONmu3w/profile-displayphoto-shrink_800_800/0/1658363548466?e=1724284800&v=beta&t=nV7a6ZctwU3H0ixXkMhInjNZhXuLRHuzc2BZ7uS5uDs" alt="Logo 1">
-                            <p>Octavio Pavon<br>Co-founder</p>
-                        </div>
-                        <div class="person">
-                            <img src="https://media.licdn.com/dms/image/D4E03AQH34q2toOv0AA/profile-displayphoto-shrink_800_800/0/1695161773582?e=1724284800&v=beta&t=Zw3BXQLzD0C1-EWLfUAsvIPJm2aCAxz7TgozO04mCyE" alt="Logo 2">
-                            <p>Gabriel Viera<br>Co-founder</p>
-                        </div>
+        <!-- End Main Section -->
+        
+        <hr class="separator">
+
+        <section class="aboutus-section">
+            <h1>About <span class="highline">Us</span></h1>
+            <p>
+                We are a dedicated group of developers committed to the ethical advancement of <span class="highline"><b>Generative Artificial Intelligence</b></span> technologies.<br>
+                Specializing in cutting-edge innovations from industry leaders such as Google, OpenAI, and Langchain, our mission is centered around impactful product development.<br>
+                <br>
+                At <b>Arkanium</b>, we merge expertise with a profound focus on ethical considerations, ensuring our advancements in AI contribute positively to society.<br>
+            </p>
+        </section>
+
+        <hr class="separator">
+
+        <!-- Partnership Section -->
+        <section class="partnerships-section">
+            <h1>Our <span class="highline">Services</span></h1>
+            <p class="description">These are some of the services we offer</p>
+        </section>
+
+        <section class="carousel-section">
+            <div class="carousel">
+                <div class="carousel-track">
+                    <div class="product">
+                        <img src="https://www.enter.co/wp-content/uploads/2023/09/istockphoto-1414699113-612x612-1-768x432.jpg" alt="Image 1" class="product-image">
+                        <h2><span class="highline">Chat Assistants</span></h2>
+                        <p>Enhance client interaction in your business with a personalized AI assistant tailored to your specific needs.</p>
+                    </div>
+                    <div class="product">
+                        <img src="https://anthemcreation.com/wp-content/uploads/2023/10/autogen-de-microsoft-lia-multi-agents-expliquee-4.jpeg" alt="Image 1" class="product-image">
+                        <h2><span class="highline">Multi-agents Systems</span></h2>
+                        <p>We specialize in developing optimized multi-agent systems designed to tackle complex tasks efficiently.</p>
+                    </div>
+                    <div class="product">
+                        <img src="https://www.marktechpost.com/wp-content/uploads/2022/02/479-scaled.jpg" alt="Image 1" class="product-image">
+                        <h2><span class="highline">Vectorial Databases</span></h2>
+                        <p>Using vector databases, we enhance semantic searches by leveraging advanced multi-agent systems. Our solutions are tailored to optimize data retrieval and enhance the precision of search results.</p>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="about-section">
-            <div class="container">
-                <div id="partnerships">
-                    <h2>Partnerships</h2>
-                    <p>These companies have already joined the AI revolution. What are you waiting for?</p>
-                </div>
-                
-            </div>
-        </section>
-        <section class="partnerships-section" id="products">
-            <div class="container">
-                <div>
-                    <h2>Products and Services</h2>
-                    <p>In addition to offering AI consulting services, we also develop our own products.</p>
-                </div>
-            </div>
-        </section>
-        <section class="partnerships-section" id="contact">
-            <div class="container">
-                <div>
-                    <h2>Talk with us!</h2>
-                    <p>What are you waiting for to join the <span class="highlight"><b>revolution</b></span>?</p>
-                </div>
-                <div>
-                    <!-- <a href="https://wa.me/5492304355796" target="_blank"> -->
-                        <button class="contact-button"><p><b>Contact us</b></p></button>
-                    <!-- </a> -->
-                </div>
-            </div>
-        </section>
-    </main>
-</body>
+
+        <sub>Our expert stack encompasses leading external-data LLM tools (such as Langchain and Llama-index), robust vector stores (like Pinecone and Chroma),<br>and state-of-the-art model providers (including OpenAI and Hugging Face).</sub>
+
+        <hr class="separator">
+
+        <script src="scripts.js"></script>
+    </body>
+
 </html>

@@ -1,0 +1,197 @@
+/* responsive.css */
+
+/* Mobile Styles */
+@media (max-width: 600px) {
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .headline {
+        font-size: 1.2em;
+        margin: 10px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .nav-list {
+        display: none; /* Hide the navigation list */
+    }
+
+    .main-section {
+        padding: 50px 10px;
+    }
+
+    .main-section h1 {
+        font-size: 2em;
+        padding: 0 10px; /* Add padding to avoid overflow */
+        text-align: center; /* Center the headline text */
+    }
+
+    .main-section p {
+        font-size: 1em;
+        max-width: 100%;
+        padding: 0 10px; /* Add padding to avoid overflow */
+    }
+
+    .partnerships-section h1 {
+        font-size: 2em;
+        padding: 0 10px; /* Add padding to avoid overflow */
+    }
+
+    .description {
+        font-size: 1em;
+        padding: 0 10px; /* Add padding to avoid overflow */
+    }
+
+    .carousel-section {
+        flex-direction: column; /* Display carousel items vertically */
+    }
+
+    .carousel-track {
+        flex-direction: column; /* Display carousel items vertically */
+    }
+
+    .product {
+        width: 90%; /* Reduce width to avoid overflow */
+        margin: 20px auto; /* Center the product and add margin */
+    }
+
+    .product-image {
+        max-height: 100px;
+    }
+
+    .aboutus-section h1 {
+        font-size: 2em;
+        padding: 0 10px; /* Add padding to avoid overflow */
+    }
+
+    .aboutus-section p {
+        font-size: 1em;
+        padding: 0 10px; /* Add padding to avoid overflow */
+    }
+}
+
+/* Tablet Styles */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .headline {
+        font-size: 1.3em;
+        margin: 15px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .nav-list {
+        display: none; /* Hide the navigation list */
+    }
+
+
+    .main-section {
+        padding: 75px 15px;
+    }
+
+    .main-section h1 {
+        font-size: 2.5em;
+    }
+
+    .main-section p {
+        font-size: 1.1em;
+        max-width: 90%;
+    }
+
+    .partnerships-section h1 {
+        font-size: 2.2em;
+    }
+
+    .description {
+        font-size: 1.1em;
+    }
+
+    .carousel-section {
+        flex-direction: column; /* Display carousel items vertically */
+    }
+
+    .carousel-track {
+        flex-direction: column; /* Display carousel items vertically */
+    }
+
+    .product {
+        width: 100%;
+        margin: 25px 0;
+    }
+
+    .product-image {
+        max-height: 120px;
+    }
+
+    .aboutus-section h1 {
+        font-size: 2.3em;
+    }
+
+    .aboutus-section p {
+        font-size: 1.1em;
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 1025px) {
+    .headline {
+        font-size: 1.5em;
+        margin: 18px;
+    }
+
+    .nav-list {
+        flex-direction: row;
+    }
+
+    .nav-list li {
+        margin-right: 20px;
+    }
+
+    .main-section {
+        padding: 100px 20px;
+    }
+
+    .main-section h1 {
+        font-size: 3em;
+    }
+
+    .main-section p {
+        font-size: 1.2em;
+        max-width: 800px;
+    }
+
+    .partnerships-section h1 {
+        font-size: 2.5em;
+    }
+
+    .description {
+        font-size: 1.2em;
+    }
+
+    .carousel-section {
+        flex-direction: row; /* Display carousel items horizontally */
+    }
+
+    .carousel-track {
+        flex-direction: row; /* Display carousel items horizontally */
+    }
+
+    .product {
+        width: 30%;
+        margin: 36px 20px;
+    }
+
+    .product-image {
+        max-height: 150px;
+    }
+
+    .aboutus-section h1 {
+        font-size: 2.5em;
+    }
+
+    .aboutus-section p {
+        font-size: 1.1em;
+    }
+}

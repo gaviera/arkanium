@@ -1,270 +1,176 @@
-/* General styles */
+/* Import the Onest font */
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@300;400;600&display=swap');
+
 body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    /* background-color: #16181F; */
-    color: #FFF;
-    background: radial-gradient(circle, #16181F, #31222F, #16181F, #31222F);
-    background-size: 200% 200%;
-    text-align: center;
-}
+    font-family: 'Onest', sans-serif; /* Establece la fuente principal del cuerpo del documento */
+    /* width: 100%; */ /* Hace que el cuerpo ocupe el ancho completo del viewport */
+    margin: 12px; /* Elimina los márgenes predeterminados */
+    padding: 0; /* Elimina el relleno predeterminado */
 
-html {
-    scroll-behavior: smooth;
-}
 
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-left: 18px;
-    padding-right: 18px;
-    padding-top: 9px;
-    padding-bottom: 9px;
-    /* display: flex; */
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
-    background: rgb(255, 255, 255, 0.05);/* rgba(255, 255, 255, 0.05); */ /* Fondo blanco translúcido */
-    border-radius: 15px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3); /* Sombra suave */
-    backdrop-filter: blur(200px); /* Aplica el blur al fondo detrás del elemento */
+    text-align: center; /* Centra el texto dentro del cuerpo */
+
+    background-color: #0c0d11; /* Establece el color de fondo del cuerpo */
+    background-image: radial-gradient(rgba(255, 255, 255, 0.192) 1px, transparent 0); /* Aplica un gradiente radial al fondo */
+    background-size: 40px 40px; /* Define el tamaño de los puntos del gradiente */
     
+    color: #ffffff; /* Establece el color de texto predeterminado */
 }
 
-.container-other {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-left: 18px;
-    padding-right: 18px;
-    padding-top: 9px;
-    padding-bottom: 9px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
-    
+h1, h2 {
+    user-select: none; /* Evita que el título sea seleccionable por el usuario */
 }
 
-/* Header styles */
-header {
-    background-color: #16181f00;
-    padding: 20px 0;
-    border-bottom: 1px solid #16181f00;
+body sub {
+    opacity: 0.5; /* Reduce la opacidad de los subíndices dentro del cuerpo */
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #FFF;
+body::-webkit-scrollbar { 
+    display: none;  /* Oculta la barra de desplazamiento en navegadores WebKit (Safari y Chrome) */
 }
 
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+/* GENERAL STYLING */
+
+.highline {
+    background-image: linear-gradient(to right, #F03634, #F9C22E); /* Aplica un gradiente lineal al texto */
+    -webkit-background-clip: text; /* Permite que el gradiente se aplique al texto en navegadores WebKit */
+    color: transparent; /* Hace que el texto sea transparente, mostrando solo el gradiente */
 }
 
-/* Navigation menu styles */
-.navigation-menu {
-    list-style: none;
-    display: flex;
-    gap: 50px;
-    margin: 0;
-    padding: 0;
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+.separator {
+    width: 50%; /* Establece el ancho del separador */
+    margin: 40px auto; /* Centra el separador horizontalmente con márgenes superior e inferior de 40px */
+    border: 0; /* Elimina cualquier borde */
+    height: 1px; /* Establece la altura del separador */
+    background-color: #ffffff1d; /* Establece el color del separador con una transparencia */
 }
 
-.navigation-link {
-    color: #FFF;
-    text-decoration: none;
-    transition: color 0.3s ease;
+/* START HEADER STYLING */
+
+/* Header styling */
+.header {
+    display: flex; /* Utiliza el modelo de caja flexible para el encabezado */
+    justify-content: space-between; /* Distribuye los elementos del encabezado de manera uniforme */
+    align-items: center; /* Centra verticalmente los elementos del encabezado */
 }
 
-.navigation-link:hover {
-    color: #CA2F35;
+/* Title styling */
+.headline {
+    font-size: 1.5em; /* Establece el tamaño del texto del título */
+    user-select: none; /* Evita que el título sea seleccionable por el usuario */
+    margin: 18px; /* Establece los márgenes internos del título */
 }
 
-/* Contact button styles */
-.contact-button {
-    background-color: #CA2F35;
-    color: #FFF;
-    text-decoration: none;
-    width: 250px;
-    border-radius: 20px;
-    border: 0;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3); /* Sombra suave */
+/* Navigator header styling */
+.nav-list {
+    list-style: none; /* Elimina los estilos de lista predeterminados */
+    display: flex; /* Utiliza el modelo de caja flexible para la lista de navegación */
+    margin: 0; /* Elimina los márgenes predeterminados */
+    padding: 0; /* Elimina el relleno predeterminado */
 }
 
-/* Hero section styles */
-.hero-section {
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding: 60px 0;
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+.nav-list li {
+    margin-right: 20px; /* Establece el margen derecho entre elementos de la lista */
 }
 
-
-.hero-content {
-    flex: 1;
+.nav-button {
+    text-decoration: none; /* Elimina el subrayado predeterminado de los botones de navegación */
+    padding: 10px 20px; /* Establece el relleno interno de los botones de navegación */
+    transition: color 0.3s ease; /* Aplica una transición suave al cambio de color */
+    color: #ffffff; /* Establece el color de texto predeterminado para los botones de navegación */
+    font-weight: normal; /* Estilo normal del texto */
 }
 
-.hero-content h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
+.nav-button:hover {
+    color: #F9C22E; /* Cambia el color del texto al pasar el cursor sobre los botones de navegación */
+}
+/* END HEADER STYLING */
+
+
+/* START MAIN STYLING */
+.main-section {
+    text-align: center; /* Centra el contenido del área principal */
+    padding: 100px 20px; /* Establece el relleno interno del área principal */
 }
 
-.hero-content p {
-    font-size: 18px;
-    margin-bottom: 30px;
+.main-section h1 {
+    font-size: 3em; /* Establece el tamaño del título principal */
+    font-weight: 600; /* Establece el peso de la fuente del título principal */
+    margin-bottom: 20px; /* Establece el margen inferior del título principal */
 }
 
-.hero-image img {
-    width: 100%;
-    max-width: 400px;
+.main-section p {
+    font-size: 1.2em; /* Establece el tamaño del texto del párrafo */
+    font-weight: 300; /* Establece el peso de la fuente del párrafo */
+    max-width: 800px; /* Establece el ancho máximo del párrafo */
+    margin: auto; /* Centra el párrafo horizontalmente */
+}
+/* END MAIN STYLING */
+
+/* START PARTNERSHIP STYLING */
+.partnerships-section {
+    text-align: center; /* Centra el contenido de la sección de asociaciones */
 }
 
-.highlight {
-    color: #F03634;
-}
-
-/* About and partnerships section styles */
-.about-section, .partnerships-section {
-    padding: 20px 0;
+.partnerships-section h1 {
+    font-size: 2.5em; /* Establece el tamaño del título de la sección de asociaciones */
+    font-weight: 600; /* Establece el peso de la fuente del título de la sección de asociaciones */
+    margin-bottom: 20px; /* Establece el margen inferior del título de la sección de asociaciones */
 }
 
 
-.section-content h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
+.description {
+    font-size: 1.2em; /* Establece el tamaño del texto de la descripción */
+    font-weight: 300; /* Establece el peso de la fuente de la descripción */
+    max-width: 800px; /* Establece el ancho máximo de la descripción */
+    margin: auto; /* Centra la descripción horizontalmente */
 }
 
-.section-content p {
-    font-size: 18px;
+.carousel-section {
+    display: flex; /* Utiliza el modelo de caja flexible para la sección de carrusel */
+    justify-content: center; /* Centra los elementos del carrusel horizontalmente */
 }
 
-.logos {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
-    margin-top: 40px;
+.carousel-track {
+    display: flex; /* Utiliza el modelo de caja flexible para la pista del carrusel */
+    justify-content: center; /* Centra los elementos de la pista del carrusel horizontalmente */
 }
 
-.logos img {
-    width: 150px;
-    height: 150px;
-    border-radius: 100%;
+.product {
+    opacity: 0.8; /* Establece la opacidad inicial de los productos */
+    text-align: center; /* Centra el contenido del producto horizontalmente */
+    width: 300px; /* Establece el ancho del producto */
+    margin: 36px 20px; /* Establece los márgenes exteriores del producto */
+    transition: transform 0.2s ease-in-out; /* Aplica una transición suave al transformar el producto */
 }
 
-.person p {
-    text-align: center;
+.product:hover {
+    opacity: 1; /* Aumenta la opacidad del producto al pasar el cursor sobre él */
+    transform: scale(1.05); /* Escala el producto en un 5% adicional al pasar el cursor sobre él */
 }
 
-/* Media queries for responsiveness */
-
-/* Tablets and smaller screens */
-@media (max-width: 768px) {
-    .container {
-        width: 80%;
-    }
-
-    .menu-toggle {
-        display: flex; /* Show the menu toggle button */
-    }
-    
-    .logos img {
-        width: 100px;
-        height: 100px;
-        border-radius: 100%;
-    }
-
-    .logo {
-        text-align: center;
-        width: 100%;
-    }
-
-    .navigation-menu {
-        display: none; /* Hide the navigation menu by default */
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-    }
-
-    .navigation-menu.active {
-        display: flex; /* Show the navigation menu when active */
-    }
-
-    .navigation-menu {
-        gap: 20px; /* Reduce gap for smaller screens */
-        justify-content: center; /* Center navigation links */
-    }
-    
-    .hero-content h1 {
-        font-size: 36px; /* Reduce font size for smaller screens */
-    }
-    
-    .hero-content p {
-        font-size: 16px; /* Reduce font size for smaller screens */
-    }
-    
-    .section-content h2 {
-        font-size: 28px; /* Reduce font size for smaller screens */
-    }
-    
-    .section-content p {
-        font-size: 16px; /* Reduce font size for smaller screens */
-    }
+.product-image {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho de su contenedor */
+    max-height: 150px; /* Establece la altura máxima de la imagen del producto */
+    object-fit: cover; /* Ajusta la imagen para que cubra todo el área disponible */
+    max-width: 100%; /* Asegura que la imagen sea completamente responsive */
+    border-radius: 14px; /* Aplica bordes redondeados a la imagen */
 }
 
-/* Mobile screens */
-@media (max-width: 480px) {
-    nav {
-        flex-direction: column; /* Stack items vertically */
-        align-items: flex-start; /* Align items to the start */
-    }
+/* END PARTNERSHIP STYLING */
 
-    .logos img {
-        width: 100px;
-        height: 100px;
-        border-radius: 100%;
-    }
-
-    .logo {
-        text-align: center;
-    }
-    
-    .navigation-menu {
-        flex-direction: column; /* Stack links vertically */
-        gap: 10px; /* Reduce gap further */
-    }
-    
-    .hero-section {
-        flex-direction: column; /* Stack hero content vertically */
-        text-align: center; /* Center text */
-    }
-    
-    .hero-content {
-        margin-bottom: 20px; /* Add margin for spacing */
-    }
-    
-    .hero-content h1 {
-        font-size: 28px; /* Reduce font size further */
-    }
-    
-    .hero-content p {
-        font-size: 14px; /* Reduce font size further */
-    }
-    
-    .section-content h2 {
-        font-size: 24px; /* Reduce font size further */
-    }
-    
-    .section-content p {
-        font-size: 14px; /* Reduce font size further */
-    }
+/* START ABOUT US STYLING */
+.aboutus-section {
+    text-align: center; /* Centra el contenido de la sección Acerca de nosotros */
+    padding: 24px; /* Establece el relleno interno de la sección Acerca de nosotros */
 }
+
+.aboutus-section p {
+    font-size: 1.1em; /* Establece el tamaño del texto de los párrafos */
+}
+
+.aboutus-section h1 {
+    font-size: 2.5em; /* Establece el tamaño del título de la sección Acerca de nosotros */
+    margin-bottom: 20px; /* Establece el margen inferior del título de la sección Acerca de nosotros */
+}
+/* END ABOUT US STYLING */
