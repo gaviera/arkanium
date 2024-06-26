@@ -136,6 +136,8 @@ body::-webkit-scrollbar {
     font-size: 1.5em; /* Establece el tamaño del texto del título */
     user-select: none; /* Evita que el título sea seleccionable por el usuario */
     margin: 18px; /* Establece los márgenes internos del título */
+    display: flex; /* Usa flexbox para el contenedor del título */
+    align-items: center; /* Centra verticalmente los elementos hijos */
 }
 
 /* Navigator header styling */
