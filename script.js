@@ -24,22 +24,4 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     moveCarousel();
-
-    // Crear el aura para el cursor
-    const aura = document.createElement('div');
-    aura.id = 'cursor-aura';
-    document.body.appendChild(aura);
-
-    document.addEventListener('mousemove', function(e) {
-        aura.style.left = `${e.clientX - aura.offsetWidth / 2}px`;
-        aura.style.top = `${e.clientY - aura.offsetHeight / 2}px`;
-    });
-
-    document.body.addEventListener('mouseleave', function() {
-        aura.style.display = 'none';
-    });
-
-    document.body.addEventListener('mouseenter', function() {
-        aura.style.display = 'block';
-    });
 });
