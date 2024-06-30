@@ -12,21 +12,26 @@
     color: #000000; /* Cambia esto al color que desees para el texto */
   }
   
-body {
+  body {
     font-family: 'Onest', sans-serif; /* Establece la fuente principal del cuerpo del documento */
-    /* width: 100%; */ /* Hace que el cuerpo ocupe el ancho completo del viewport */
     margin: 12px; /* Elimina los márgenes predeterminados */
     padding: 0; /* Elimina el relleno predeterminado */
-
-
     text-align: center; /* Centra el texto dentro del cuerpo */
-
     background-color: #0c0d11; /* Establece el color de fondo del cuerpo */
-    background-image: radial-gradient(rgba(255, 255, 255, 0.192) 1px, transparent 0); /* Aplica un gradiente radial al fondo */
+    background-image: radial-gradient(rgba(255, 255, 255, 0.208) 1px, transparent 0); /* Aplica un gradiente radial al fondo */
     background-size: 40px 40px; /* Define el tamaño de los puntos del gradiente */
-    
+    animation: moveBackground 8000s linear infinite; /* Aplica la animación al fondo */
     color: #ffffff; /* Establece el color de texto predeterminado */
 }
+
+/* Define the keyframes for the background animation */
+@keyframes moveBackground {
+
+    100% {
+        background-position: 99999px 99999px;
+    }
+}
+
 
 
 
@@ -119,8 +124,39 @@ body::-webkit-scrollbar {
     margin: 40px auto; /* Centra el separador horizontalmente con márgenes superior e inferior de 40px */
     border: 0; /* Elimina cualquier borde */
     height: 1px; /* Establece la altura del separador */
-    background-color: #ffffff1d; /* Establece el color del separador con una transparencia */
+    opacity: 100%;
+    background-color: #ffffff00; /* Establece el color del separador con una transparencia */
+    position: relative; /* Posiciona el elemento de manera relativa */
+    overflow: hidden; /* Oculta cualquier contenido que sobresalga */
 }
+
+.separator::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgb(255, 140, 0), transparent);
+    box-shadow:  0 10px 5px rgb(255, 132, 0); /* Añade una sombra para crear el efecto de aura */
+    animation: neonLight 5s linear infinite; /* Aplica la animación de luz de neón */
+}
+
+@keyframes neonLight {
+    0% {
+        left: -100%;
+        opacity: 30%;
+    }
+    50% {
+        left: 100%;
+        opacity: 100%;
+    }
+    100% {
+        left: -100%;
+        opacity: 30%;
+    }
+}
+
 
 /* START HEADER STYLING */
 
@@ -239,7 +275,7 @@ body::-webkit-scrollbar {
 }
 
 .product {
-    opacity: 0.8; /* Establece la opacidad inicial de los productos */
+    opacity: 0.9; /* Establece la opacidad inicial de los productos */
     text-align: center; /* Centra el contenido del producto horizontalmente */
     width: 300px; /* Establece el ancho del producto */
     margin: 36px 20px; /* Establece los márgenes exteriores del producto */
@@ -247,16 +283,17 @@ body::-webkit-scrollbar {
 }
 
 .product:hover {
+    cursor: pointer;
     opacity: 1; /* Aumenta la opacidad del producto al pasar el cursor sobre él */
-    transform: scale(1.05); /* Escala el producto en un 5% adicional al pasar el cursor sobre él */
+    transform: scale(1.1); /* Escala el producto en un 5% adicional al pasar el cursor sobre él */
 }
 
 .product-image {
-    width: 80%; /* Asegura que la imagen ocupe todo el ancho de su contenedor */
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho de su contenedor */
     max-height: 150px; /* Establece la altura máxima de la imagen del producto */
-    object-fit: cover; /* Ajusta la imagen para que cubra todo el área disponible */
     max-width: 100%; /* Asegura que la imagen sea completamente responsive */
     border-radius: 14px; /* Aplica bordes redondeados a la imagen */
+    object-fit:cover; /* Asegura que la imagen cubra todo el área del contenedor sin distorsión */
 }
 
 /* END PARTNERSHIP STYLING */
