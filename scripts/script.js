@@ -1,11 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
     const carousel = document.querySelector('.techstack');
     const items = Array.from(document.querySelectorAll('.techstack-item'));
-    
+
     // Duplicar los elementos del carrusel 5 veces para la ilusión de bucle infinito
     for (let i = 0; i < 5; i++) {
         items.forEach(item => {
-            const clone = item.cloneNode(true);
+            const parent = item.parentNode;
+            const clone = parent.cloneNode(true);
             carousel.appendChild(clone);
         });
     }
